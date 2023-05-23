@@ -1,19 +1,29 @@
 .container {
-    width: 500px;
-    height: 150px;
-    border: 1px solid blue;
-    background: lightblue;
-    color: red;
-    display: flex;
-    align-items: center;
+  width: 500px;
+  height: 150px;
+  border: 1px solid blue;
+  background: lightblue;
+  color: red;
+  display: flex;
+  align-items: center;
 }
 
 .profile_pic {
-    height: 50%;
-    border-radius: 50%;
-    margin: 0 0 0 10px;
+  height: 50%;
+  border-radius: 50%;
+  margin: 0 0 0 10px;
 }
 
 .content_container {
-    margin: 0 0 0 20px;
+  margin: 0 0 0 20px;
+  width: 100%
+}
+
+.edit {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.lastp {
+  margin: 0;
 }

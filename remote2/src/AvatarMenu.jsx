@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./AvatarMenu.module.css";
 
 const AvatarMenu = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState(null);
+
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     const fakeRequest = () => {
@@ -14,7 +18,7 @@ const AvatarMenu = () => {
             age: "31",
             lastEntry: "Ayer",
           });
-        }, 5000);
+        }, 100);
       });
     };
     const fetchData = async () => {
@@ -35,21 +39,24 @@ const AvatarMenu = () => {
 
   if (isLoading) {
     return <div>Loading...</div>;
-  }
-  else {
+  } else {
     return (
       <div>
         <div className={styles.container}>
           <div className={styles.content_container}>
             <h1>{data?.name}</h1>
             <h3>Edad: {data?.age}</h3>
-            <p>Ultimo ingreso: {data?.lastEntry}</p>
+            <div className={styles.edit}>
+              <p className={styles.lastp}>Ultimo ingreso: {data?.lastEntry}</p>
+              <button
+              onClick={() => {navigate("edit")}}
+              >Editar info</button>
+            </div>
           </div>
         </div>
       </div>
     );
   }
-
 };
 
 export default AvatarMenu;

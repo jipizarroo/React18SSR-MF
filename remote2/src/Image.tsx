@@ -1,7 +1,10 @@
 import React from "react";
+
 import MenuSvg from "../assets/MenuSVG.jsx";
 import MenuBar from "./MenuBar.jsx";
 import AvatarMenu from "./AvatarMenu.jsx"
+
+
 
 const Image: React.FC = () => {
   const [openMenu, setOpenMenu] = React.useState(false);
