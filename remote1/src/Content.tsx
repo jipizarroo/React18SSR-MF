@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorBoundary from "./ErrorBoundary.jsx";
 
 const Image = React.lazy(() => import('remote2/Image') as Promise<{ default: React.FC }>);
 
@@ -15,10 +16,11 @@ const Content: React.FC<ContentProps> = (props: ContentProps) => {
         This demonstrates nested federated modules being rendered server-side.
       </p>
       <p>Dynamic content: {props.content || 'Default text'}</p>
-
+      <ErrorBoundary>
       <React.Suspense fallback={<h1>Loading...</h1>}>
         <Image />
       </React.Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

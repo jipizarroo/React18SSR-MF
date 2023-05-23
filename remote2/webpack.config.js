@@ -10,7 +10,7 @@ module.exports = (_, argv) => ({
   },
 
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".json", "css"],
   },
   devtool: "inline-source-map",
   devServer: {

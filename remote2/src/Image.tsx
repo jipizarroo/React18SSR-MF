@@ -1,8 +1,8 @@
 import React from "react";
 
 import MenuSvg from "../assets/MenuSVG.jsx";
-import MenuBar from "./MenuBar.jsx";
-import AvatarMenu from "./AvatarMenu.jsx"
+import MenuBar from "./MenuBar";
+import AvatarMenu from "./AvatarMenu"
 
 
 
