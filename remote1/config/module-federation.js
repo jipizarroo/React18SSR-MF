@@ -7,7 +7,6 @@ module.exports = {
     name: 'remote1',
     filename: 'remoteEntry.js',
     remotes: {
-      remote2: 'remote2@http://localhost:3002/client/remoteEntry.js',
     },
     exposes: {
       './Content': './src/Content',
@@ -30,7 +29,6 @@ module.exports = {
       filename: 'remoteEntry.js',
       library: { type: 'commonjs-module' },
       remotes: {
-        remote2: 'remote2@http://localhost:3002/server/remoteEntry.js',
       },
       exposes: {
         './Content': './src/Content',
@@ -51,7 +49,6 @@ module.exports = {
       name: 'remote1',
       library: { type: 'commonjs-module' },
       remotes: {
-        remote2: 'remote2@http://localhost:3002/server/remoteEntry.js',
       },
     }),
   ],

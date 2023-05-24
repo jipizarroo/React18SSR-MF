@@ -1,11 +1,17 @@
-import React from 'react';
-import * as ReactDOMClient from 'react-dom/client';
-import App from './components/App';
+import React from "react";
+import * as ReactDOMClient from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./components/App";
 
-const render = App => {
-  const root = document.getElementById('root');
+const render = (App) => {
+  const root = document.getElementById("root");
 
-  ReactDOMClient.hydrateRoot(root, <App />);
+  ReactDOMClient.hydrateRoot(
+    root,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
 };
 
 render(App);

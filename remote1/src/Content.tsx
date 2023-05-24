@@ -1,9 +1,8 @@
-import React from 'react';
-
-const Image = React.lazy(() => import('remote2/Image') as Promise<{ default: React.FC }>);
+import React, { Children } from 'react';
 
 export interface ContentProps {
   content?: string;
+  children?: any
 }
 
 const Content: React.FC<ContentProps> = (props: ContentProps) => {
@@ -17,7 +16,7 @@ const Content: React.FC<ContentProps> = (props: ContentProps) => {
       <p>Dynamic content: {props.content || 'Default text'}</p>
 
       <React.Suspense fallback={<h1>Loading...</h1>}>
-        <Image />
+      {props.children}
       </React.Suspense>
     </div>
   );

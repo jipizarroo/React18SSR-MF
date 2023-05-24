@@ -8,6 +8,7 @@ module.exports = {
     filename: 'container.js',
     remotes: {
       remote1: 'remote1@http://localhost:3001/client/remoteEntry.js',
+      remote2: 'remote2@http://localhost:3002/client/remoteEntry.js',
     },
     shared: [{ react: deps.react, 'react-dom': deps['react-dom'] }],
   }),
@@ -18,6 +19,7 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {
         remote1: 'remote1@http://localhost:3001/server/remoteEntry.js',
+        remote2: 'remote2@http://localhost:3002/server/remoteEntry.js',
       },
       shared: [{ react: deps.react, 'react-dom': deps['react-dom'] }],
     }),
@@ -26,7 +28,7 @@ module.exports = {
       library: { type: 'commonjs-module' },
       remotes: {
         remote1: 'remote1@http://localhost:3001/server/remoteEntry.js',
-        remote2: 'remote2@http://localhost:3002/client/remoteEntry.js',
+        remote2: 'remote2@http://localhost:3002/server/remoteEntry.js',
       },
     }),
   ],

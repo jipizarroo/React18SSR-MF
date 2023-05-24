@@ -12,6 +12,7 @@ module.exports = {
     remotes: {},
     exposes: {
       "./Image": "./src/Image",
+      "./EditAvatar": "./src/EditAvatar"
     },
     shared: {
       ...deps,
@@ -33,6 +34,7 @@ module.exports = {
       remotes: {},
       exposes: {
         "./Image": "./src/Image",
+        "./EditAvatar": "./src/EditAvatar"
       },
       shared: {
         ...deps,

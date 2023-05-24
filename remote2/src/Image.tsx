@@ -1,7 +1,7 @@
 import React from "react";
 import MenuSvg from "../assets/MenuSVG.jsx";
-import MenuBar from "./MenuBar.jsx";
-import AvatarMenu from "./AvatarMenu.jsx"
+import MenuBar from "./MenuBar";
+import AvatarMenu from "./AvatarMenu"
 
 const Image: React.FC = () => {
   const [openMenu, setOpenMenu] = React.useState(false);
@@ -17,8 +17,6 @@ const Image: React.FC = () => {
     >
       <h2>Remote 2: Test</h2>
       <p>
-        Hey there! This is the image component from remote2. It is being
-        rendered server-side.
       </p>
       <div onClick={() => setOpenMenu(!openMenu)}>
         <MenuSvg  />
