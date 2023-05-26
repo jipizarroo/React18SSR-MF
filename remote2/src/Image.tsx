@@ -6,6 +6,10 @@ import AvatarMenu from "./AvatarMenu"
 const Image: React.FC = () => {
   const [openMenu, setOpenMenu] = React.useState(false);
 
+  function handler (){
+    console.log("Hola")
+  }
+
   return (
     <div
       style={{
@@ -22,7 +26,6 @@ const Image: React.FC = () => {
         <MenuSvg  />
       </div>
       {openMenu && <MenuBar />}
-      <AvatarMenu />
     </div>
   );
 };

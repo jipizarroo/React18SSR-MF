@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AvatarMenu.module.css";
 
-const AvatarMenu = () => {
+const AvatarMenu = ({ nav }: any) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState(null);
 
@@ -34,22 +34,27 @@ const AvatarMenu = () => {
   console.log(isLoading);
 
   if (isLoading) {
-    return <div>Loading...</div>;
-  }
-  else {
+    return (
+      <div className={styles.container}>
+        <div>Loading...</div>
+      </div>
+    );
+  } else {
     return (
       <div>
         <div className={styles.container}>
           <div className={styles.content_container}>
             <h1>{data?.name}</h1>
             <h3>Edad: {data?.age}</h3>
-            <p>Ultimo ingreso: {data?.lastEntry}</p>
+            <div className={styles.edit}>
+              <p className={styles.lastp}>Ultimo ingreso: {data?.lastEntry}</p>
+              <button onClick={nav}>Editar info</button>
+            </div>
           </div>
         </div>
       </div>
     );
   }
-
 };
 
 export default AvatarMenu;
