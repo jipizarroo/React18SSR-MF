@@ -13,7 +13,7 @@ module.exports = {
     exposes: {
       "./Image": "./src/Image",
       "./AvatarMenu": "./src/AvatarMenu",
-      "./EditAvatar": "./src/EditAvatar"
+      "./EditAvatar": "./src/EditAvatar",
     },
     shared: {
       ...deps,
@@ -24,6 +24,10 @@ module.exports = {
       "react-dom": {
         singleton: true,
         requiredVersion: deps["react-dom"],
+      },
+      "react-router-dom": {
+        singleton: true,
+        requiredVersion: deps["react-router-dom"],
       },
     },
   }),
@@ -36,7 +40,7 @@ module.exports = {
       exposes: {
         "./Image": "./src/Image",
         "./AvatarMenu": "./src/AvatarMenu",
-        "./EditAvatar": "./src/EditAvatar"
+        "./EditAvatar": "./src/EditAvatar",
       },
       shared: {
         ...deps,
@@ -47,6 +51,10 @@ module.exports = {
         "react-dom": {
           singleton: true,
           requiredVersion: deps["react-dom"],
+        },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: deps["react-router-dom"],
         },
       },
     }),

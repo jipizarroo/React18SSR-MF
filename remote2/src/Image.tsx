@@ -1,13 +1,15 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import MenuSvg from "../assets/MenuSVG.jsx";
 import MenuBar from "./MenuBar";
-import AvatarMenu from "./AvatarMenu"
+import AvatarMenu from "./AvatarMenu";
+import EditAvatar from "./EditAvatar";
 
 const Image: React.FC = () => {
   const [openMenu, setOpenMenu] = React.useState(false);
 
-  function handler (){
-    console.log("Hola")
+  function handler() {
+    console.log("Hola");
   }
 
   return (
@@ -20,12 +22,15 @@ const Image: React.FC = () => {
       }}
     >
       <h2>Remote 2: Test</h2>
-      <p>
-      </p>
-      <div onClick={() => setOpenMenu(!openMenu)}>
+      <p></p>
+      <Routes>
+        <Route path="/" element={<AvatarMenu />} />
+        <Route path="/edit" element={<EditAvatar />} />
+      </Routes>
+      {/* <div onClick={() => setOpenMenu(!openMenu)}>
         <MenuSvg  />
       </div>
-      {openMenu && <MenuBar />}
+      {openMenu && <MenuBar />} */}
     </div>
   );
 };

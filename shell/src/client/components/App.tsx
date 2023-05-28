@@ -46,19 +46,21 @@ const App = () => {
           placeholder="Luke, I am your father..."
         />
       </div>
-      <Routes>
-        <Route
-          path="/other"
-          element={
-            <React.Suspense fallback={<h1>Loading....</h1>}>
-              <Content content={state}>
-                <div>Veremos si esto funciona</div>
-              </Content>
-            </React.Suspense>
-          }
-        />
-      </Routes>
-      {/* <React.Suspense fallback={<h1>Loading....</h1>}>
+      <React.Suspense>
+        <Routes>
+          <Route
+            path="/other"
+            element={
+              <React.Suspense fallback={<h1>Loading....</h1>}>
+                <Content content={state}>
+                  <div>Veremos si esto funciona</div>
+                </Content>
+              </React.Suspense>
+            }
+          />
+        </Routes>
+      </React.Suspense>
+      <React.Suspense fallback={<h1>Loading....</h1>}>
         <Content content={state}>
           <div>Veremos si esto funciona</div>
         </Content>
@@ -67,7 +69,7 @@ const App = () => {
         <React.Suspense fallback={<h1>Loading....</h1>}>
           <Image />
         </React.Suspense>
-      </ErrorBoundary> */}
+      </ErrorBoundary>
     </div>
   );
 };

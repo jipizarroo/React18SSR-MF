@@ -14,6 +14,7 @@ module.exports = (_, argv) => ({
   },
   devtool: "inline-source-map",
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, "./")
     },
